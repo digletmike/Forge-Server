@@ -13,14 +13,14 @@ console.log(`Server running in ${process.env.NODE_ENV} mode`);
 if (process.env.NODE_ENV === "production") {
   const provider = new HDWalletProvider(
     process.env.PRIVATE_KEY,
-    `https://rinkeby.infura.io/v3/${process.env.INFURA_KEY}`
+    `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`
   );
 
   // web3 Instances
   web3 = new Web3(provider);
-  ZUT_ADDRESS = "0x487D429BF793D855B7680388d4451dF726157C18";
-  FORGE_ADDRESS = "0xC9844e4264C9785012A4a0f5ee8eE7F789D2D7B7";
-  ADMIN_ADDRESS = "0xd750bCe912F6074178D68B6014bc003764201803";
+  ZUT_ADDRESS = "0x83f873388cd14b83a9f47fabde3c9850b5c74548";
+  FORGE_ADDRESS = "0x9c81BA58A80CbfAF879EC1440ac7B24F401f5873";
+  ADMIN_ADDRESS = "0x4cE1a32A728c1C4cb2075eBEd3EfCfDc5e0959D4";
 } else {
   // web3 Instances
   web3 = new Web3("http://localhost:8545");
